@@ -27,7 +27,7 @@ jobs:
     - name: Create build path staging
       run: mkdir staging && cp target/*.jar staging
 
-    - name: Upload math result for job
+    - name: Upload artifact job
       uses: actions/upload-artifact@v1
       with:
         name: app-contatos
