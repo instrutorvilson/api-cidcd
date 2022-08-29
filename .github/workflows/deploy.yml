@@ -41,6 +41,8 @@ jobs:
     - name: Build and push
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: heroku container:push -a appcontatosv web 
+        HEROKU_APP_NAME: app-contatos
+      run: heroku plugins:install java && heroku create --no-remote && heroku deploy:jar staging/ApiRest-0.0.1-SNAPSHOT.jar --app app-contatos
+
 
     
