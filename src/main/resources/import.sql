@@ -1,0 +1,1 @@
+insert into contato(nome, email, fone)values('maria','maria@gmail.com','1234-5678');
