@@ -37,7 +37,9 @@ jobs:
       env: 
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }} 
       run: heroku container:login
-
+    - name: permisoes
+      run: heroku apps:info -a
+      
     - name: Build and push
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
