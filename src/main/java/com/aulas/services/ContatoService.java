@@ -39,7 +39,7 @@ public class ContatoService {
 	@Transactional( readOnly = true)
 	public List<ContatoDTO> consultarContatos(){
 	    List<Contato> contatos = repo.findAll();
-	    List<ContatoDTO> contatosDTO = new ArrayList();
+	    List<ContatoDTO> contatosDTO = new ArrayList<>();
 	    for(Contato ct : contatos) {
 	    	contatosDTO.add(new ContatoDTO(ct));
 	    }
