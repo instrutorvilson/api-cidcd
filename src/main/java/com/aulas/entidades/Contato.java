@@ -24,9 +24,6 @@ public class Contato {
 	@GeneratedValue( strategy = GenerationType.IDENTITY)
 	private Long id;	
 	
-	@OneToMany(mappedBy = "contato", cascade = CascadeType.REMOVE)
-	private List<Compromisso> compromissos;
-
 	@NotBlank(message = "Nome é obrigatório")
 	@Column(length = 40, nullable = false)
 	private String nome;
