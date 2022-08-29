@@ -11,8 +11,8 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
+    enviroment: prod
 
     steps:
     - uses: actions/checkout@v3
